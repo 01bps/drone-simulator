@@ -1,0 +1,72 @@
+.data-input {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .input-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .manual-input, .file-input {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  
+  .waypoint-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .input-group label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0099CC;
+  }
+  
+  .use-location-btn {
+    margin-bottom: 15px;
+  }
+  
+  .file-input p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+  }
