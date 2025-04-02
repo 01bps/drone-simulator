@@ -1,0 +1,50 @@
+.telemetry-dashboard {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .telemetry-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .telemetry-label {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .telemetry-value {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .warning {
+    color: #ff4d4d;
+  }
+  
+  .battery-bar {
+    height: 6px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 3px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  .battery-level {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+  }
