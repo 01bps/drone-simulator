@@ -1,0 +1,49 @@
+.drone-controls {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .drone-controls.disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  .control-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .simulation-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .progress-slider {
+    flex: 1;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #eee;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #00BFFF;
+    cursor: pointer;
+  }
+  
+  .progress-value {
+    width: 40px;
+    text-align: right;
+    font-size: 14px;
+  }
