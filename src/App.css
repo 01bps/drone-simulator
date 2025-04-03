@@ -1,79 +1,60 @@
 .app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.app-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.app-header h1 {
-  color: #333;
-}
-
-.app-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-}
-
-.map-wrapper {
-  position: relative;
-}
-
-.controls-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.app-footer {
-  margin-top: 20px;
-  text-align: center;
-  color: #777;
-  font-size: 14px;
-}
-
-/* Media Query for larger screens */
-@media (min-width: 768px) {
-  .app-main {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
-  .map-section {
-    flex: 3;
+  .app-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .app-header h1 {
+    color: #333;
+  }
+  
+  .app-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .map-wrapper {
+    position: relative;
   }
   
   .controls-section {
-    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-}
-
-@media (max-width: 600px) {
-  .waypoint-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+  
+  .app-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
   }
-
-  .waypoint-form label {
-      width: 100%;
+  
+  /* Media Query for larger screens */
+  @media (min-width: 768px) {
+    .app-main {
+      flex-direction: row;
+    }
+    
+    .map-section {
+      flex: 3;
+    }
+    
+    .controls-section {
+      flex: 2;
+    }
   }
-
-  .waypoint-form input {
-      width: 100%;
-  }
-}
-
-/* Add these to your App.css file */
-
-/* Reduce map height for mobile devices */
+  /* Reduce map height for mobile devices */
 @media (max-width: 600px) {
   .map-wrapper {
     height: 40vh !important; /* Force smaller height on mobile */
@@ -143,8 +124,6 @@
     padding: 10px;
   }
 }
-
-/* Add these to your App.css file - mobile-specific fixes only */
 
 @media (max-width: 767px) {
   /* Set a fixed height for the map container */
