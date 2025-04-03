@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './styles.css';
+import L from 'leaflet';
 import { useSimulation } from '../../context/SimulationContext';
 import PathVisualizer from '../PathVisualizer';
 
@@ -18,6 +19,23 @@ function MapController() {
       );
     }
   }, [selectedLocation, map]);
+
+  return null;
+}
+
+function WaypointsBoundsAdjuster() {
+  const map = useMap();
+  const { waypoints } = useSimulation();
+
+  useEffect(() => {
+    if (waypoints && waypoints.length > 1) {
+      // Create bounds object
+      const bounds = L.latLngBounds(waypoints.map(point => [point.lat, point.lng]));
+      
+      // Fit map to these bounds with some padding
+      map.fitBounds(bounds, { padding: [50, 50] });
+    }
+  }, [waypoints, map]);
 
   return null;
 }
@@ -39,6 +57,7 @@ function MapComponent() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <MapController />
+        <WaypointsBoundsAdjuster />
         <PathVisualizer />
       </MapContainer>
     </div>

@@ -117,20 +117,20 @@ function DroneControls() {
   };
 
   // Start/stop animation based on isPlaying state
-  useEffect(() => {
-    if (isPlaying) {
-      lastTimeRef.current = null; // Reset last time to avoid jumps
-      animationRef.current = requestAnimationFrame(animateFrame);
-    } else if (animationRef.current) {
+useEffect(() => {
+  if (isPlaying) {
+    lastTimeRef.current = null; // Reset last time to avoid jumps
+    animationRef.current = requestAnimationFrame(animateFrame);
+  } else if (animationRef.current) {
+    cancelAnimationFrame(animationRef.current);
+  }
+
+  return () => {
+    if (animationRef.current) {
       cancelAnimationFrame(animationRef.current);
     }
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [isPlaying, waypoints]);
+  };
+}, [isPlaying, waypoints, animateFrame, progress, setCurrentPosition]);
 
   // Set initial position when waypoints change
   useEffect(() => {

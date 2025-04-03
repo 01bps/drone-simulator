@@ -6,11 +6,11 @@ import './styles.css';
 
 // Create a custom drone icon
 const createDroneIcon = () => {
-  return L.divIcon({
-    className: 'drone-icon',
-    html: `<div class="drone-marker"></div>`,
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
+  return L.icon({
+    iconUrl: '/assets/drone-icon.svg',
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
   });
 };
 
@@ -43,7 +43,7 @@ function PathVisualizer() {
       {traveledPath.length > 1 && (
         <Polyline
           positions={traveledPath.map(wp => [wp.lat, wp.lng])}
-          pathOptions={{ color: '#00BFFF', weight: 3 }}
+          pathOptions={{ color: '#1500ff', weight: 5 }}
         />
       )}
 
@@ -52,8 +52,8 @@ function PathVisualizer() {
         <Polyline
           positions={remainingPath.map(wp => [wp.lat, wp.lng])}
           pathOptions={{ 
-            color: '#00BFFF', 
-            weight: 3, 
+            color: '#1500ff', 
+            weight: 5, 
             dashArray: '10, 10',
             opacity: 0.7
           }}
